@@ -116,7 +116,6 @@ a:link {
 }
 
 /* Intro */
-
 .intro {
     display: flex;
     align-items: center;
@@ -124,19 +123,25 @@ a:link {
 
 .subtitle {
     flex: 1;
+    padding: 0.5em 0.5em;
 }
 
 .intro-img {
     flex-grow: 1;
 }
 
-
-
 .title_intro {
     margin-top: 0;
 }
 
+
+
 /* Projects */
+.projects {
+    margin-top: 1em;
+
+}
+
 .project_container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -160,12 +165,18 @@ footer {
     padding: 1em 1em;
 }
 
-.social-media {
+.social_media ul {
     display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    margin-right: 25em;
-    font-size: 3em;
+    flex-direction: row;
+    justify-content: center;
 }
+
+.social_media ul li {
+    list-style: none;
+    margin: 0.5em;
+    font-size: 2.5em;
+}
+
+
+
 
