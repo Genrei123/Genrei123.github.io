@@ -118,10 +118,12 @@ a:link {
 /* Intro */
 .intro {
     display: flex;
+    
 }
 
 .side {
     flex: 1;
+    color: white;
 }
 
 .side:first-child {
