@@ -163,9 +163,18 @@ a:link {
     .project_container { grid-template-columns: repeat(3, 1fr); }
 }
 
-.title_projects {
+.title_project {
     align-items: center;
+    margin-bottom: 0.5em;
+    display: flex;
+    justify-content: center;
 }
+
+.pimg {
+    max-width: 100%;
+}
+
+
 
 /* Footer */
 footer {
