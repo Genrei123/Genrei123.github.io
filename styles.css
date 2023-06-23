@@ -19,6 +19,12 @@
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
+
+    --text: #fcf2f6;
+    --background: #040102;
+    --primary-button: #22aa71;
+    --secondary-button: #000000;
+    --accent: #22aa71;
 }
 
 @media (min-width: 800px) {
@@ -37,8 +43,8 @@ html, body {
 }
 
 body {
-    background-color: var(--clr-light);
-    color: var(--clr-dark);
+    background-color: var(--background);
+    color: var(--text);
     margin: 0;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
@@ -67,7 +73,7 @@ h3 { font-size: var(--fs-h3); }
     font-family: var(--ff-secondary);
     font-weight: var(--fw-bold);
     font-size: var(--fs-h1);
-    color: var(--clr-accent);
+    color: var(--primary-button);
     text-align: center;
     margin: 0;
 }
@@ -80,7 +86,7 @@ h3 { font-size: var(--fs-h3); }
 .title_intro,
 .title_projects,
 .title_about {
-    background-color: var(--clr-accent);
+    background-color: var(--primary-button);
     font-family: var(--ff-secondary);
     text-align: center;
     padding: 1rem 0;
@@ -93,7 +99,7 @@ section {
 
 /* Nav bar */
 .navbar {
-    padding: 1em 1em;
+    padding: 0.5em 0.5em;
     margin: 0;
     background-color: var(--clr-dark);
 }
@@ -104,6 +110,10 @@ section {
     font-size: 1.5em;
     color: white;
     text-decoration: none;
+}
+
+.navbar ul li {
+    list-style-type: ;
 }
 
 .navbar ul li a:hover {
@@ -117,6 +127,7 @@ a:link {
 .navbar ul {
     display: flex;
     justify-content: right;
+    list-style-type: none;
 }
 
 /* Intro */
@@ -141,15 +152,35 @@ a:link {
 }
 
 /* Projects */
+
+/* Really good generated template
+.projects {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    background-color: var(--clr-dark);
+    color: white;
+    padding: 1em;
+}
+ */
+
 .project_container {
     display: grid;
     margin: 1em;
-    gap: 1em; 
+    gap: 1em;
 }
 
 .project {
     border: 1px dashed var(--clr-accent);
     padding: 0.5em;
+}
+
+/* Pop up animation when hovered
+https://blog.avada.io/css/card-hover-effects */
+.project:hover {
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+    box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+        0 24px 46px var(--box-shadow-color);
 }
 
 /* Responsivedesign for project*/
@@ -177,13 +208,14 @@ a:link {
 
 .pimg {
     max-width: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 /* Footer */
 footer {
     display: flex;
     background-color: var(--clr-dark);
-    padding: 1em 1em;
+    padding: 0.5em 0.5em;
     color: white;
 }
 
