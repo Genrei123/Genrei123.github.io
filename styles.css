@@ -121,7 +121,6 @@ a:link {
 
 /* Intro */
 .intro {
-    
     display: grid;
     margin: 0 auto;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -154,13 +153,19 @@ a:link {
 }
 
 /* Responsivedesign for project*/
+/*Code about media and design*/
+/*https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41420fe*/
 @media (min-width: 600px) {
-    .project_container { grid-template-columns: repeat(2, 1fr); }
+    .project_container { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
 }
   
   
 @media (min-width: 900px) {
-    .project_container { grid-template-columns: repeat(3, 1fr); }
+    .project_container { 
+        grid-template-columns: repeat(3, 1fr); 
+    }
 }
 
 .title_project {
@@ -173,8 +178,6 @@ a:link {
 .pimg {
     max-width: 100%;
 }
-
-
 
 /* Footer */
 footer {
