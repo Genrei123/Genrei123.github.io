@@ -20,6 +20,9 @@
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
 
+    /* Refer color to this page 
+    https://realtimecolors.com/?colors=fcf2f6-040102-22aa71-000000-22aa71 */
+
     --text: #fcf2f6;
     --background: #040102;
     --primary-button: #22aa71;
@@ -110,10 +113,6 @@ section {
     font-size: 1.5em;
     color: white;
     text-decoration: none;
-}
-
-.navbar ul li {
-    list-style-type: ;
 }
 
 .navbar ul li a:hover {
