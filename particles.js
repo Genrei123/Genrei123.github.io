@@ -3,7 +3,7 @@ import * as THREE from 'https://unpkg.com/three/build/three.module.js';
 
 let scene, camera, renderer;
 
-let star_count = 500;
+let star_count = 400;
 let geo;
 let star;
 let stars;
@@ -26,7 +26,7 @@ function init() {
     renderer.setSize(window.innerWidth, window.innerHeight);
 
     //We can actually change the target div which is pretty nice
-    const targetDiv = document.getElementById('left');
+    const targetDiv = document.getElementById('home');
     targetDiv.appendChild(renderer.domElement);
 
     //CSS of the script
@@ -45,26 +45,26 @@ function init() {
 
     for (let i = 0; i < star_count; i++)
     {
-let x = Math.random() * 400 - 200;
-let y = Math.random() * 200 - 100;
-let z = Math.random() * 500 - 100;
+            let x = Math.random() * 400 - 200;
+            let y = Math.random() * 200 - 100;
+            let z = Math.random() * 500 - 100;
 
-let xx = x;
-let yy = y;
-let zz = z;
+            let xx = x;
+            let yy = y;
+            let zz = z;
 
-pa[6*i] = x;
-pa[6*i + 1] = y;
-pa[6*i + 2] = z;
+            pa[6*i] = x;
+            pa[6*i + 1] = y;
+            pa[6*i + 2] = z;
 
-pa[6*i + 3] = xx;
-pa[6*i + 4] = yy;
-pa[6*i + 5] = zz;
+            pa[6*i + 3] = xx;
+            pa[6*i + 4] = yy;
+            pa[6*i + 5] = zz;
 
-va[2*i] = va[2*i + 1] = 0;
+            va[2*i] = va[2*i + 1] = 0;
     }
     
-    let material = new THREE.PointsMaterial({size: 2, sizeAttenuation: false, color: 0xffffff});
+    let material = new THREE.PointsMaterial({size: 1.5, sizeAttenuation: false, color: 0xffffff});
     stars = new THREE.Points(geo, material);
     scene.add(stars);
     animate();
@@ -74,20 +74,21 @@ function animate() {
 
     for (let i = 0; i < star_count; i++) 
     {
-va[2*i] += 0.03;
-va[2*i+1] += 0.025;
+            va[2*i] += 0.03;
+            va[2*i+1] += 0.025;
 
-pa[6*i + 2] += va[2*i];
-pa[6*i + 5] += va[2*i+1];
+        
+            pa[6*i + 2] += va[2*i];
+            pa[6*i + 5] += va[2*i+1];
 
-if (pa[6*i + 5] > 200) {
-    let z = Math.random() * 200 - 100;
-    pa[6*i+2] = z;
-    pa[6*i+5] = z;
+            if (pa[6*i + 5] > 200) {
+                let z = Math.random() * 200 - 100;
+                pa[6*i+2] = z;
+                pa[6*i+5] = z;
 
-    va[2*i] = 0;
-    va[2*i+1] = 0;
-}
+                va[2*i] = 0;
+                va[2*i+1] = 0;
+            }
     }
 
     pos.needsUpdate = true;

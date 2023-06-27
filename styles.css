@@ -96,8 +96,7 @@ h3 { font-size: var(--fs-h3); }
 }
 
 section {
-    padding: 0em 0em;
-    
+    padding: 0em 0em;  
 }
 
 /* Nav bar */
@@ -131,24 +130,37 @@ a:link {
 
 /* Intro */
 .intro {
-    display: grid;
-    margin: 0 auto;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.5em;
+
+    height: 100vh;
 }
 
-.side {
-    color: white;
+.intro-img {
+    border-radius: 50%;
+    max-width: 100%;
+    border: white 5px solid;
+    width: 300px;
+    height: auto; 
 }
 
-.side:first-child {
-    margin-right: 20px;
-    padding: 1em;
+.intro-img:hover {
+    scale: 1.1;
 }
 
 .title_intro {
-    width: 100%;
-    color: var(--clr-dark);
+    padding: 0.5em;
 }
+
+.subtitle {
+    padding: 1em;
+}
+
+
 
 /* Projects */
 
