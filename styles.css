@@ -204,6 +204,7 @@ a:link {
     text-decoration: none;
     color: var(--text);
     font-size: 50px;
+
 }
 .project {
     border: 1px dashed var(--clr-accent);
@@ -235,12 +236,24 @@ https://blog.avada.io/css/card-hover-effects */
         grid-template-columns: repeat(2, auto); 
     }
 }
+
+@media (max-width: 600px) {
+    .project_container { 
+        height: auto; 
+    }
+}
   
   
 @media (min-width: 900px) {
     .project_container { 
         
-        grid-template-columns: repeat(3, auto); 
+        grid-template-columns: repeat(3, auto);
+    }
+}
+
+@media (max-width: 900px) {
+    .project_container { 
+        height: auto;
     }
 }
 
@@ -280,6 +293,12 @@ footer {
     justify-content: right;
     align-items: center;
     margin-left: 1em;
+}
+
+@media (max-width: 600px) {
+    .footer_container { 
+        flex-direction: column;
+    }
 }
 
 input[type=text], select, textarea, #email {
