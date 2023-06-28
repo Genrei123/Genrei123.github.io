@@ -30,7 +30,8 @@
     <!-- I wnat to create a parallax script in JS in the future -->
     <script src="nav-scrolling.js"></script>
 
-    <!-- I want a wworking form requests probably wqith PHP or some API to make request-->
+    <!-- I want to create on click events -->
+    <script src="onclick.js"></script>
 
 
 </head>
@@ -72,18 +73,19 @@
     </section>
 
     <!-- Projects -->
-    <section class = "projects" id = "projects">
+    <section class = "projects">
         <h2 class = "title_intro">My Journey!</h2>
 
         <div class="project_container">
-            <div class="project">
+
+            <div class="project" id = "projects">
                 <h3 class="title_project">Student Management System (C++)</h3>
                 <img src="images/sms++.png" alt="" class = "pimg">
                 <p>This project allowed me to gain proficiency in database management, record manipulation, and user authentication, while demonstrating my ability to utilize functions, if statements, and loops effectively. It showcases my practical skills and understanding of software engineering principles.</p>
                 <a href = "" class = "github"><i class="fa-brands fa-github"></i></a>    
             </div>
     
-            <div class="project">
+            <div class="project" id = "projects">
                 <h3 class="title_project">Kowtski (HTML, CSS, JS, PHP)</h3>
                 <img src="images/kowtski.png" alt="" class = "pimg">
                 <p>A mockup social media website that allows Users to post, read, like and dislike quotes from Anonymous users. It allowed me to apply learning in database management, made us think about 
@@ -93,7 +95,7 @@
                 
             </div>
 
-            <div class="project">
+            <div class="project" id = "projects">
                 <h3 class="title_project">Portfolio (HTML, CSS, JS)</h3>
                 <img src="images/portfolio.png" alt="" class = "pimg">
                 <p>My very own portfolio that showcases my skills in HTML, CSS, and JS. It allowed me to practice my skills in HTML, CSS, and JS. It also allowed me to practice my skills in design and user experience.
@@ -118,12 +120,12 @@
             </div>
 
             <div class="right">
-                <form action="action_page.php">
+                <form action="https://formsubmit.co/genreypogi@gmail.com" method="POST">
                     <label for="fname">Name:</label>
                     <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
                     <label for="email">Email:</label>
-                    <input type="text" id="email" name="lastname" placeholder="Your email...">
+                    <input type="email" id="email" name="email" placeholder="Your email...">
 
 
                     <label for="Message">Message:</label>
