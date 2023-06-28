@@ -13,7 +13,7 @@ if (isset($_POST["submit"])) {
 
   // Send the email
   if (mail($to, $subject, $txt, $headers)) {
-    header("Location: index.html");
+    header("Location: index.php?mailsend");
     echo "Email sent successfully!";
 
   } 
