@@ -208,9 +208,15 @@ a:link {
 .project {
     border: 1px dashed var(--clr-accent);
     padding: 0.5em;
-    max-height: 500px;
+    max-height: 600px;
     overflow: hidden;
     cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 /* Pop up animation when hovered
@@ -226,7 +232,7 @@ https://blog.avada.io/css/card-hover-effects */
 /*https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41420fe*/
 @media (min-width: 600px) {
     .project_container { 
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, auto); 
     }
 }
   
@@ -234,7 +240,7 @@ https://blog.avada.io/css/card-hover-effects */
 @media (min-width: 900px) {
     .project_container { 
         
-        grid-template-columns: repeat(3, 1fr); 
+        grid-template-columns: repeat(3, auto); 
     }
 }
 
@@ -276,7 +282,7 @@ footer {
     margin-left: 1em;
 }
 
-input[type=text], select, textarea {
+input[type=text], select, textarea, #email {
     width: 100%; /* Full width */
     padding: 12px; /* Some padding */ 
     border: 1px solid #ccc; /* Gray border */
@@ -302,12 +308,7 @@ input[type=text], select, textarea {
     background-color: #45a049;
   }
 
-#email {
-    width: 100%;
-    height: 1.5rem;
-    padding: 12px 20px;
-    resize: vertical;
-}
+
 
 
   
