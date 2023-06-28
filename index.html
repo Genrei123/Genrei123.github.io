@@ -36,45 +36,37 @@
 
 <body>
     <header>
-        <div class="logo"></div>
+        
+    </header>
 
+    <div class="nav">
         <nav class = "navbar">
             <ul>
                 <li><a href = "#home">Home</a></li>
-                <li><a href = "#awards">About</a></li>
                 <li><a href = "#projects">Projects</a></li>
+                <li><a href = "#footer">Contact Me</a></li>
             </ul>
         </nav>
-
-    </header>
+    </div>
 
     
 
     <!-- Introduction -->
     <section class = "intro" id = "home">
 
-        <img src = "profile.jpg" alt = "profile" class = "intro-img">
+        <img src = "images/profile.jpg" alt = "profile" class = "intro-img">
 
         <h1 class="title_intro">
             Hello, I'm <strong>Genrey!</strong>
         </h1>
 
         <p class = "subtitle">
-            I love to build things! The excitement of discovering and creating something new excites me. Ever since I was a kid
-            I'm an engineer and builder at heart and it resonated it with me more when I have started coding.
+            I love to build things! The excitement of discovering and creating something new excites me. One thing that you should know about me, is that I would always be working on something!
         </p>
-
-
-
-
 
         <div class="container">
 
         </div>
-        
-        
-
-
     </section>
 
     <!-- Projects -->
@@ -84,25 +76,28 @@
         <div class="project_container">
             <div class="project">
                 <h3 class="title_project">Student Management System (C++)</h3>
-                <img src="sms++.png" alt="" class = "pimg">
+                <img src="images/sms++.png" alt="" class = "pimg">
                 <p>This project allowed me to gain proficiency in database management, record manipulation, and user authentication, while demonstrating my ability to utilize functions, if statements, and loops effectively. It showcases my practical skills and understanding of software engineering principles.</p>
                 <a href = "" class = "github"><i class="fa-brands fa-github"></i></a>    
             </div>
     
             <div class="project">
-                
-            </div>
-    
-            <div class="project">
+                <h3 class="title_project">Kowtski (HTML, CSS, JS, PHP)</h3>
+                <img src="images/kowtski.png" alt="" class = "pimg">
+                <p>A mockup social media website that allows Users to post, read, like and dislike quotes from Anonymous users. It allowed me to apply learning in database management, made us think about 
+                    design and user experience, and allowed us to practice our skills in HTML, CSS, JS, and PHP.
+                </p>
+                <a href = "" class = "github"><i class="fa-brands fa-github"></i></a> 
                 
             </div>
 
             <div class="project">
-                <h3 class="title_project">Hello</h3>
-            </div>
-
-            <div class="project">
-                <h3 class="title_project">Hello</h3>
+                <h3 class="title_project">Portfolio (HTML, CSS, JS)</h3>
+                <img src="images/portfolio.png" alt="" class = "pimg">
+                <p>My very own portfolio that showcases my skills in HTML, CSS, and JS. It allowed me to practice my skills in HTML, CSS, and JS. It also allowed me to practice my skills in design and user experience.
+                </p>
+                <a href = "" class = "github"><i class="fa-brands fa-github"></i></a> 
+                
             </div>
         </div>
 
@@ -110,57 +105,33 @@
         
         
     </section>
-
-    <!-- Create this a form of contact -->
-    <section class = "awards" id = "awards">
-        <h2 class = "title_projects">My Certificates!</h2>
-        <p class = "subtitle">Check it out! Check it out!</p>
-        
-    </section>
-
 
     <!-- Footer-->
-    <footer>
+    <footer id = "footer">
+        <div class="footer_container">
 
-        <div class="footer_left">
-            <h3>Contact me!</h3>
-            <form action="submit" method = "POST">
-                <div class="contact_form">
+            <div class="left">
+                <h3 class="title_intro">Stay in contact?</h2>
+                <p class="subtitle">Interested in my works? Please do contact me! I would love to hear from you.</p>
+            </div>
 
-                    <label for="firstName" class="firstname">First Name</label>
-                    <input type="text" name="" id="">
+            <div class="right">
+                <form action="action_page.php">
+                    <label for="fname">Name:</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-                    <label for="lastName" class="lastName">Last Name</label>
-                    <input type="text">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="lastname" placeholder="Your email...">
 
-                    <label for="email" class="email">Email</label>
-                    <input type="text">
 
-                    <label for="message">Message</label>
-                    <input type="text">
+                    <label for="Message">Message:</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
-                    <button>Submit</button>
-                </div>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+           
 
-            </form>
-        </div>
-
-        <div class="social_media">
-            <h3>Follow me!</h3>
-                <ul>
-                    
-                    <li>
-                        <a href = "https://www.facebook.com/genrey.cristobal.3/" class = "social-media-icon"><i class="fab fa-facebook-f"></i></a>
-                    </li>
-        
-                    <li>
-                        <a href = "https://www.instagram.com/genreycristobal03/" class = "social-media-icon"><i class="fab fa-instagram"></i></a>
-                    </li>
-        
-                    <li>
-                        <a href = "https://www.linkedin.com/in/genrey-cristobal-3b0b3b1b2/" class = "social-media-icon"><i class="fab fa-linkedin-in"></i></a>
-                    </li>
-                </ul>
         </div>
     </footer>
 
