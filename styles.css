@@ -143,6 +143,12 @@ a:link {
     list-style-type: none;
 }
 
+@media (max-width: 600px) {
+    .navbar ul { 
+        justify-content: center;
+    }
+}
+
 /* Intro */
 .intro {
     display: flex;
@@ -296,6 +302,12 @@ footer {
 }
 
 @media (max-width: 600px) {
+    .footer_container { 
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1000px) {
     .footer_container { 
         flex-direction: column;
     }
