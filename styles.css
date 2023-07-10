@@ -219,7 +219,7 @@ a:link {
 .project {
     border: 1px dashed var(--clr-accent);
     padding: 0.5em;
-    max-height: 600px;
+    
     overflow: hidden;
     cursor: pointer;
 
@@ -244,6 +244,7 @@ https://blog.avada.io/css/card-hover-effects */
 @media (min-width: 600px) {
     .project_container { 
         grid-template-columns: repeat(2, auto); 
+        height: auto;
     }
 }
 
@@ -256,8 +257,8 @@ https://blog.avada.io/css/card-hover-effects */
   
 @media (min-width: 900px) {
     .project_container { 
-        
         grid-template-columns: repeat(3, auto);
+        height: auto;
     }
 }
 
