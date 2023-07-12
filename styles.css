@@ -319,8 +319,11 @@ footer {
 .btnholder {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: space-between;
+}
 
+.btnholders a {
+    margin: 0.5em;
 }
 
 
