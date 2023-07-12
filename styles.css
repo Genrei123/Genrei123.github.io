@@ -41,8 +41,15 @@
 
 strong { font-weight: var(--fw-bold) ;}
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 5rem;
+}
+
 html, body {
     overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding: 5rem;
 }
 
 body {
@@ -162,7 +169,7 @@ a:link {
 
     padding: 0.5em;
 
-    height: 100vh;
+    min-height: 100vh;
     margin-top: 1em;
 }
 
@@ -206,9 +213,12 @@ a:link {
     margin: 1em;
     gap: 1em;
     padding: 1rem;
+
     
-    height: 100vh;
+    min-height: 100%;
 }
+
+
 
 .project_container a {
     text-decoration: none;
@@ -228,6 +238,11 @@ a:link {
     justify-content: space-between;
     align-items: center;
 
+}
+
+.centered {
+    grid-column: 2 / 3;
+    justify-self: center;
 }
 
 /* Pop up animation when hovered
@@ -326,8 +341,6 @@ footer {
     margin: 0.5em;
 }
 
-
-
 @media (max-width: 600px) {
     .footer_container { 
         flex-direction: column;
@@ -365,6 +378,24 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #0a6e0f;
 }
+
+/* Animation */
+
+/* Animation by fireship with Intersection Observer */
+/* https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API */
+/* https://www.youtube.com/watch?v=T33NN_pPeNI */
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
 
 
 

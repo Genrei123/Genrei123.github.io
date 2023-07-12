@@ -31,12 +31,19 @@
     <!-- This is the space thing in my intro page-->
     <script src="particles.js" type="module"></script>
     
+    
 
     <!-- I wnat to create a parallax script in JS in the future -->
     <script src="nav-scrolling.js"></script>
 
     <!-- I want to create on click events -->
     <script src="onclick.js"></script>
+
+    <!-- Animation on scroll effect -->
+    <!-- Defer means run after HTML body -->
+    <script defer src = "scrolleffect.js"></script>
+
+    <script defer src = "auto-arrange.js"></script>
 
 
 </head>
@@ -60,7 +67,7 @@
     
 
     <!-- Introduction -->
-    <section class = "intro" id = "home">
+    <section class = "intro hidden" id = "home">
 
         <img src = "images/profile.jpg" alt = "profile" class = "intro-img">
 
@@ -78,7 +85,7 @@
     </section>
 
     <!-- Projects -->
-    <section class = "projects" id = "section_projects">
+    <section class = "projects hidden" id = "section_projects">
         <h2 class = "title_intro">My Journey!</h2>
 
         <div class="project_container">
@@ -126,6 +133,8 @@
                 
             </div>
 
+    
+        
         </div>
 
         
@@ -134,7 +143,7 @@
     </section>
 
     <!-- Footer-->
-    <footer id = "footer">
+    <footer class = "footer hidden" id = "footer">
         <div class="footer_container">
 
             <div class="left">
