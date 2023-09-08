@@ -124,23 +124,30 @@ section {
     transition: background-color 0.4s ease-in-out;
 }
 
-.navbar {
+.nav {
     padding: 0.3em 0.3em;
     margin: 0;
     background-color: transparent;
     margin-right: 0.3em;
+
+    pointer-events: none;
+}
+
+.nav.scrolled ul li a{
+    color: white;
+    pointer-events: painted;
     
 }
 
-.navbar ul li a {
+.nav ul li a{
     list-style: none;
     margin: 0.5em;
     font-size: 1.5em;
-    color: white;
+    color: transparent;
     text-decoration: none;
 }
 
-.navbar ul li a:hover {
+.nav ul li a:hover {
     color: var(--clr-accent);
 }
 
@@ -148,14 +155,14 @@ a:link {
     color: white;
 }
 
-.navbar ul {
+.nav ul {
     display: flex;
     justify-content: right;
     list-style-type: none;
 }
 
 @media (max-width: 600px) {
-    .navbar ul { 
+    .nav ul { 
         justify-content: center;
     }
 }
@@ -218,6 +225,9 @@ a:link {
     min-height: 100%;
 }
 
+.project_container:has(.project:hover) .title_project {
+    
+}
 
 
 .project_container a {
@@ -240,15 +250,12 @@ a:link {
 
 }
 
-.centered {
-    grid-column: 2 / 3;
-    justify-self: center;
-}
+
 
 /* Pop up animation when hovered
 https://blog.avada.io/css/card-hover-effects */
 .project:hover {
-    transform: translateY(-5px) scale(1.005) translateZ(0);
+    transform: translateY(-5px) scale(1.0010) translateZ(0);
     box-shadow: 0 24px 36px rgba(0,0,0,0.11),
         0 24px 46px var(--box-shadow-color);
 }
@@ -256,24 +263,23 @@ https://blog.avada.io/css/card-hover-effects */
 /* Responsivedesign for project*/
 /*Code about media and design*/
 /*https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41420fe*/
-@media (min-width: 600px) {
-    .project_container { 
-        grid-template-columns: repeat(2, auto); 
-        height: auto;
-    }
-}
 
 @media (max-width: 600px) {
-    .project_container { 
+    .project_container {
+        grid-template-columns: repeat(1, auto);
         height: auto; 
     }
 }
-  
-  
+
 @media (min-width: 900px) {
     .project_container { 
         grid-template-columns: repeat(3, auto);
         height: auto;
+    }
+
+    .centered {
+        grid-column: 2 / 3;
+        justify-self: center;
     }
 }
 
