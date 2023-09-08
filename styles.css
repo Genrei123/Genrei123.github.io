@@ -76,6 +76,7 @@ h3 {
     margin: 0rem;
     font-family: "Rubik", sans-serif;
     text-transform: uppercase;
+    text-shadow: 4px 2px black;
 }
 
 h1 { font-size: var(--fs-h1); }
@@ -224,11 +225,6 @@ a:link {
     
     min-height: 100%;
 }
-
-.project_container:has(.project:hover) .title_project {
-    
-}
-
 
 .project_container a {
     text-decoration: none;
