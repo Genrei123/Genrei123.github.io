@@ -252,9 +252,11 @@ a:link {
     font-size: 50px;
 }
 
-.project_container a:hover {
-    scale: 1.2;
+.btnholders a:hover {
+    font-size: 3.5rem;
     transition: all 200ms ease-in-out;
+
+    
 }
 
 .project {
