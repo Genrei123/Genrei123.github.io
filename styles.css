@@ -52,6 +52,13 @@ html, body {
     scroll-padding: 5rem;
 }
 
+/* No Scrollbar but with scrolling functionalities 
+https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll
+*/
+html::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
 body {
     background-color: var(--background);
     color: var(--text);
@@ -60,6 +67,8 @@ body {
     font-size: var(--fs-body);
     font-size: var(--fw-reg);
     line-height: 1.5;
+
+    
 }
 
 img {
@@ -191,6 +200,7 @@ a:link {
 
 .intro-img:hover {
     scale: 1.1;
+    transition: all 200ms ease-in-out;
 }
 
 .title_intro {
@@ -200,6 +210,16 @@ a:link {
 .subtitle {
     padding: 1em;
 }
+
+.intro__socials {
+    font-size: 2rem;
+}
+
+.intro__socials a {
+    color: grey;
+}
+
+
 
 
 
@@ -230,8 +250,13 @@ a:link {
     text-decoration: none;
     color: var(--text);
     font-size: 50px;
-
 }
+
+.project_container a:hover {
+    scale: 1.2;
+    transition: all 200ms ease-in-out;
+}
+
 .project {
     border: 1px dashed var(--clr-accent);
     padding: 0.5em;
@@ -251,9 +276,11 @@ a:link {
 /* Pop up animation when hovered
 https://blog.avada.io/css/card-hover-effects */
 .project:hover {
-    transform: translateY(-5px) scale(1.0010) translateZ(0);
+    transform: translateY(-5px) scale(1.02) translateZ(0);
     box-shadow: 0 24px 36px rgba(0,0,0,0.11),
         0 24px 46px var(--box-shadow-color);
+
+    transition: all 0.5s ease-in-out;
 }
 
 /* Responsivedesign for project*/
@@ -305,6 +332,13 @@ footer {
     padding: 1rem;
 }
 
+footer form {
+    width: 75%;
+    margin: 0 auto;
+
+    font-family: var(--ff-primary);
+}
+
 .footer_container {
     display: flex;
 }
@@ -323,6 +357,12 @@ footer {
 
 .left .icons {
     font-size: 7rem;
+}
+
+.left .icons a:hover {
+    font-size: 9rem;
+    transition: all 200ms ease-in-out;
+    
 }
 
 .left a {
@@ -363,7 +403,7 @@ input[type=text], select, textarea, #email {
     box-sizing: border-box; 
     margin-top: 6px; 
     margin-bottom: 16px; 
-    resize: vertical 
+    resize: vertical;
 }
   
   
@@ -374,11 +414,14 @@ input[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+
+    margin-top: 1em;
 }
 
 
 input[type=submit]:hover {
     background-color: #0a6e0f;
+    scale: 1.2;
 }
 
 /* Animation */
@@ -394,6 +437,19 @@ input[type=submit]:hover {
 .show {
     opacity: 1;
     transform: translateX(0);
+}
+
+/* Icon colors */
+.linkedin:hover {
+    color: #0077B5;
+}
+
+.github:hover {
+    color: white;
+}
+
+.facebook:hover {
+    color: #3b5998;
 }
 
 
