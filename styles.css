@@ -254,9 +254,7 @@ a:link {
 
 .btnholders a:hover {
     font-size: 3.5rem;
-    transition: all 200ms ease-in-out;
-
-    
+    transition: all 200ms ease-in-out;  
 }
 
 .project {
@@ -272,6 +270,7 @@ a:link {
     align-items: center;
 
 }
+
 
 
 
@@ -326,6 +325,7 @@ https://blog.avada.io/css/card-hover-effects */
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     max-height: 300px;
     width: 100%;
+    object-fit: cover;
 }
 
 /* Footer */
